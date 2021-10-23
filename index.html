@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('	872da68d82be7ec0cbd1296559d79e73');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '근우와 은영의 결혼식',
+        description: '2021년 11월 27일',
+        imageUrl:
+          'https://postfiles.pstatic.net/MjAyMTEwMjNfMTUx/MDAxNjM0OTg2ODMzNDYx.JD7frOgmQ1xUr9nZAKQVMozE4v0yeVQHdVYg0asgxEQg.Zw9z1x_YkkUviegre6iOCJVPyqMU0Q6Mh_gldiEHGxIg.JPEG.loveeyc/KakaoTalk_20211023_111957928_14_(2).jpg?type=w773',
+        link: {
+          mobileWebUrl: 'http://kwey.quv.kr',
+          webUrl: 'http://kwey.quv.kr',
+        },
+      },
+      buttons: [
+        {
+          title: '알림장 보기',
+          link: {
+            mobileWebUrl: 'http://kwey.quv.kr',
+            webUrl: 'http://kwey.quv.kr',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
