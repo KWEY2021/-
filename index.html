@@ -4,30 +4,35 @@
 <script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. KWEY</p>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
 <a id="kakao-link-btn" href="javascript:sendLink()">
   <img
     src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
   />
 </a>
 <script type="text/javascript">
- Kakao.init('	872da68d82be7ec0cbd1296559d79e73');
+ Kakao.init('872da68d82be7ec0cbd1296559d79e73');
   function sendLink() {
     Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
         title: '근우와 은영의 결혼식',
-        description: '2021년 11월 27일',
+        description: '2021.11.27',
         imageUrl:
-          'https://kwey2021.github.io/-/',
+          'https://kwey2021.github.io/-/KakaoTalk_20211023_111957928_08.jpg',
         link: {
           mobileWebUrl: 'http://kwey.quv.kr',
           webUrl: 'http://kwey.quv.kr',
         },
       },
+      social: {
+        likeCount: 175, //99999가 최대입니다
+        commentCount: 0, //99999가 최대입니다
+        sharedCount: 53, //99999가 최대입니다
+      },
       buttons: [
         {
-          title: '알림장 보기',
+          title: '자세히 보기',
           link: {
             mobileWebUrl: 'http://kwey.quv.kr',
             webUrl: 'http://kwey.quv.kr',
